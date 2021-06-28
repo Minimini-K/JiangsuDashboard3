@@ -20,7 +20,7 @@ function addCities(originalCities) {
     createDiv1.id = "citySet13";
     createDiv1.className = "form-check";
     label1.id = "city13";
-    label1.className = "form-check-label";
+    label1.className = "form-check-label text3D";
     label1.innerText = "All"
     button1.className = "button3D"
     button1.value = "1";
@@ -32,9 +32,9 @@ function addCities(originalCities) {
     input1.type = "checkbox";
     input1.id = "all"
     createDiv1.style = "position: absolute; left:0px;top:30px";
-    label1.style = 'color:#ffffff;font-weight: bold'
-    button1.style = 'position: relative;top:-20px;left: 25px;font-size:11px;height:19px'
-    input1.style = 'position: relative;left:5px;top:2px;color:#696969;'
+    label1.style = 'font-weight: normal;font-size:14px'
+    button1.style = 'position: relative;top:-23px;left: 20px;font-size:11px;height:19px'
+    input1.style = 'position: relative;left:5px;top:0px;color:#696969;'
     document.getElementById('cityGroup').appendChild(createDiv1);
     document.getElementById(createDiv1.id).appendChild(input1);
     document.getElementById(createDiv1.id).appendChild(button1);
@@ -54,7 +54,7 @@ function addCities(originalCities) {
         createDiv.className = "form-check";
         label.id = "city" + (i - 1).toString();
         // lable1.className = "rectangle"
-        label.className = "form-check-label";
+        label.className = "form-check-label text3D";
         label.innerText = originalCities[i - 1];
         //button.innerText = originalCities[i - 1];
         button.className = "button3D"
@@ -69,9 +69,9 @@ function addCities(originalCities) {
         input.name = 'city';
         input.type = "checkbox";
         createDiv.style = "position: absolute; left:" + ((i % 5) * 105).toString() + "px;top:" + (Math.floor(i / 5) * 23 + 30).toString() + "px";
-        label.style = 'color:#ffffff;font-weight: bold'
+        label.style = 'font-weight: normal;font-size:14px'
         input.style = 'position: absolute;top:-1px;left:5px;color:#696969;'
-        button.style = 'position: absolute;top:1px;left: 25px;font-size:11px;height:19px'
+        button.style = 'position: absolute;top:-1px;left: 20px;font-size:11px;height:19px'
         // lable2.innerText = originalCities[i];
         document.getElementById('cityGroup').appendChild(createDiv);
         document.getElementById(createDiv.id).appendChild(input);
@@ -85,6 +85,7 @@ function addCities(originalCities) {
 
 
 }
+
 
 // ------------------------------ Jiangsu Values -----------------------------------------------
 function updateValues(cate) {
@@ -102,6 +103,7 @@ function updateValues(cate) {
             createDiv1.id = "valueSet1" + i.toString();
             //createDiv2.id = "valueSet2" + i.toString();
             lable1.id = "name" + i.toString();
+            lable1.className = "text3D"
             lable2.id = "value" + i.toString();
             lable3.id = "unit" + i.toString();
             lable4.id = "name1" + i.toString();
@@ -110,10 +112,11 @@ function updateValues(cate) {
             createDiv1.style = "border:1.5px solid  #C0C0C0;width:80%; height: 40px;position: absolute; left: 10px;top:" + (Math.floor(i * 54 + 45)).toString() + "px";
             //createDiv2.style = " border:1.5px solid  #C0C0C0;width:90%;height:40px;margin-top:10px;"
             //lable4.style = " font-size:12px;background: white;position: relative; top:-13px;left: 5px;color:#454545;font-weight:bold;"
-                        lable4.style = " font-size:13px;background: white;position: relative; top:-13px;left: -2px;color:#696969;font-weight:bold;"
-            button.style = " font-size:12px;position: relative; top:-12px;left:-5px;font-weight:bold;height:20px"
+            lable4.style = " font-size:14px;background: white;position: relative; top:-13px;left: -2px;color:#696969;font-weight:normal;"
+            button.style = " font-size:14px;position: relative; top:-12px;left:-5px;font-weight:normal;height:20px"
             lable2.style = "font-size:18px;margin-top:-8px;margin-left:35%;font-weight:bold;color:#696969;"
             lable3.style = "font-size:13px;margin-top:-30px;margin-right:3px;color:#696969;text-align: right;"
+            lable1.style="font-weight:normal"
             lable1.innerHTML = csvdata[i].name;
             lable4.innerHTML = csvdata[i].name;
             //button.innerText = csvdata[i].name;
@@ -801,10 +804,3 @@ function updateDashboard(cate) {
     // add correlation image
     addCorrImage(cate)
 }
-
-
-
-
-
-
-
