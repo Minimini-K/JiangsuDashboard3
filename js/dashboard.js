@@ -152,7 +152,7 @@ $("button[name=\"citybt\"]").click(function () {
             $("input:checkbox[value = 'Lianyungang']").prop("checked", false).change();
     else if (name == 'Huaian')
         if ($(this).attr("value") % 2 == 1)
-            $("input:checkbox[value = 'Huaizn']").prop("checked", true).change();
+            $("input:checkbox[value = 'Huaian']").prop("checked", true).change();
         else
             $("input:checkbox[value = 'Huaian']").prop("checked", false).change();
     else if (name == 'Yancheng')
