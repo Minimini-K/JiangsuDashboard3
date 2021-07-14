@@ -62,6 +62,7 @@ function addCities(originalCities) {
         button.name = "citybt";
         button.style = 'position: relative;font-size:11px;'
         button.innerText = originalCities[i - 1];
+        button.value = "1";
         // lable2.id = "city" + i.toString();
         // lable2.className = "cityName"
         input.className = "form-check-input";
