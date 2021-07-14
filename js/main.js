@@ -114,8 +114,8 @@ function updateValues(cate) {
             //lable4.style = " font-size:12px;background: white;position: relative; top:-13px;left: 5px;color:#454545;font-weight:bold;"
             lable4.style = " font-size:14px;background: white;position: relative; top:-13px;left: -2px;color:#696969;font-weight:normal;"
             button.style = " font-size:14px;position: relative; top:-12px;left:-5px;font-weight:normal;height:20px"
-            lable2.style = "font-size:18px;margin-top:-8px;margin-left:35%;font-weight:bold;color:#696969;"
-            lable3.style = "font-size:13px;margin-top:-30px;margin-right:3px;color:#696969;text-align: right;"
+            lable2.style = "font-size:18px;margin-top:-10px;margin-left:40%;font-weight:bold;color:#696969;"
+            lable3.style = "font-weight:normal;font-size:13px;margin-top:-30px;margin-right:3px;color:#696969;text-align: right;"
             lable1.style="font-weight:normal"
             lable1.innerHTML = csvdata[i].name;
             lable4.innerHTML = csvdata[i].name;
