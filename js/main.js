@@ -57,26 +57,26 @@ function addCities(originalCities) {
         label.className = "form-check-label text3D";
         label.innerText = originalCities[i - 1];
         //button.innerText = originalCities[i - 1];
-        button.className = "button3D"
+        button.className = "button3D text3D"
         button.id = "city" + (i - 1).toString() + "bt";
         button.name = "citybt";
         button.style = 'position: relative;font-size:11px;'
-        button.value = "1";
+        button.innerText = originalCities[i - 1];
         // lable2.id = "city" + i.toString();
         // lable2.className = "cityName"
         input.className = "form-check-input";
         input.value = originalCities[i - 1];
         input.name = 'city';
         input.type = "checkbox";
-        createDiv.style = "position: absolute; left:" + ((i % 5) * 105).toString() + "px;top:" + (Math.floor(i / 5) * 23 + 30).toString() + "px";
+        createDiv.style = "position: absolute; left:" + ((i % 5) * 103).toString() + "px;top:" + (Math.floor(i / 5) * 23 + 30).toString() + "px";
         label.style = 'font-weight: normal;font-size:14px'
         input.style = 'position: absolute;top:-1px;left:5px;color:#696969;'
-        button.style = 'position: absolute;top:-1px;left: 20px;font-size:11px;height:19px'
+        button.style = 'font-weight: normal;font-size:14px;position: absolute;top:-1px;left: 20px;height:19px'
         // lable2.innerText = originalCities[i];
         document.getElementById('cityGroup').appendChild(createDiv);
         document.getElementById(createDiv.id).appendChild(input);
         document.getElementById(createDiv.id).appendChild(button);
-        document.getElementById(button.id).appendChild(label)
+        //document.getElementById(button.id).appendChild(label)
         // document.getElementById('cityGroup').appendChild(createDiv);
         // document.getElementById(createDiv.id).appendChild(button);
         // document.getElementById(button.id).appendChild(input);
@@ -108,7 +108,7 @@ function updateValues(cate) {
             lable3.id = "unit" + i.toString();
             lable4.id = "name1" + i.toString();
             button.id = "name" + i.toString() + "bt";
-            button.className = "button3D namebt";
+            button.className = "button3D namebt text 3D";
             createDiv1.style = "border:1.5px solid  #C0C0C0;width:80%; height: 40px;position: absolute; left: 10px;top:" + (Math.floor(i * 54 + 45)).toString() + "px";
             //createDiv2.style = " border:1.5px solid  #C0C0C0;width:90%;height:40px;margin-top:10px;"
             //lable4.style = " font-size:12px;background: white;position: relative; top:-13px;left: 5px;color:#454545;font-weight:bold;"
@@ -123,12 +123,13 @@ function updateValues(cate) {
             // lable2.innerHTML = csvdata[i].value + "&nbsp;" + csvdata[i].unit
             lable2.innerHTML = csvdata[i].value
             lable3.innerHTML = csvdata[i].unit
+            button.innerText = csvdata[i].name;
             if (csvdata[i].name == "Gross regional product " || csvdata[i].name == "Budget expenditure" || csvdata[i].name == "Number of granted patent") {
                 document.getElementById('valueGroup').appendChild(createDiv1);
                 //document.getElementById(createDiv1.id).appendChild(createDiv2);
                 //document.getElementById(createDiv2.id).appendChild(lable1);
                 document.getElementById(createDiv1.id).appendChild(button);
-                document.getElementById(button.id).appendChild(lable1)
+               // document.getElementById(button.id).appendChild(lable1)
                 document.getElementById(createDiv1.id).appendChild(lable2);
                 document.getElementById(createDiv1.id).appendChild(lable3);
             } else {
@@ -237,13 +238,13 @@ function addCorrImage(cate) {
     image = document.getElementById('img1')
     image.src = 'data/' + cate + ".png"
     if (cate == "enco")
-        image.style = "width:70%;margin-left: 35px"
+        image.style = "width:85%;margin-left: 10px"
     else if (cate == "soci")
-        image.style = "width:73%;margin-left: 18px"
+        image.style = "width:87%;margin-left: 5px"
     else if (cate == "envi")
-        image.style = "width:73%;margin-left: 18px"
+        image.style = "width:87%;margin-left: 0px"
     else if (cate == "tech")
-        image.style = "width:73%;margin-left: 18px"
+        image.style = "width:87%;margin-left: 0px"
 }
 
 // ------------------------------Map Legend Image-----------------------------------------------
