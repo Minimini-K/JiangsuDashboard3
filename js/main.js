@@ -108,8 +108,8 @@ function updateValues(cate) {
             lable3.id = "unit" + i.toString();
             lable4.id = "name1" + i.toString();
             button.id = "name" + i.toString() + "bt";
-            button.className = "button3D namebt text 3D";
-            createDiv1.style = "border:1.5px solid  #C0C0C0;width:80%; height: 40px;position: absolute; left: 10px;top:" + (Math.floor(i * 54 + 45)).toString() + "px";
+            button.className = "button3D namebt text3D";
+            createDiv1.style = "border:1.5px solid  #C0C0C0;width:83%; height: 40px;position: absolute; left: 6px;top:" + (Math.floor(i * 54 + 43)).toString() + "px";
             //createDiv2.style = " border:1.5px solid  #C0C0C0;width:90%;height:40px;margin-top:10px;"
             //lable4.style = " font-size:12px;background: white;position: relative; top:-13px;left: 5px;color:#454545;font-weight:bold;"
             lable4.style = " font-size:14px;background: white;position: relative; top:-13px;left: -2px;color:#696969;font-weight:normal;"
